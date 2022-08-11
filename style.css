@@ -276,20 +276,25 @@ p[data-width="wide"] {
   text-align: center;
 }
 
-@media (min-width: 50em) {
-  .cta {
-    text-align: left;
-  }
-}
-
 .cta::before {
   content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: url("./images/bg-simplify-section-desktop.svg");
+  background-image: url("./images/bg-simplify-section-mobile.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: left;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+
+  .cta::before {
+    background-image: url("./images/bg-simplify-section-desktop.svg");
+    background-position: bottom;
+  }
 }
 
 /* End of CTA */
